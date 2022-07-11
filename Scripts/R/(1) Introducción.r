@@ -2,7 +2,7 @@
 #                         Unidad de Informática - Facultad de Ciencias Económicas
 #                                Curso Libre Programación básica en Python y R 2022-1
 #                                   Sesión 1: Introducción a Python  y R
-#                                   Monitora: Juan Felipe Acevedo Pérez                                 
+#                                   Monitor: Juan Felipe Acevedo Pérez                                 
 #=========================================================================================================#
 
 
