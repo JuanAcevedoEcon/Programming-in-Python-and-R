@@ -1,0 +1,4 @@
+Hola! Bienvenidos al curso de introducción a la programación de python
+El día de hoy vamos a explorar la apertura de archivos y otras cosas fantásticas
+¿Qué tal una adivinanza?
+¿Qué tiene un cuello pero no cabeza?

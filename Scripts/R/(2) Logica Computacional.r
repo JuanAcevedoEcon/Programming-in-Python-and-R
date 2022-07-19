@@ -24,6 +24,15 @@ print("(*)_(*)") #dibujar las patas
 # Ejemplo de velocidad
 #Dado el tiempo y la distancia en metros de un movil, ingresados por teclado, calcule la velocidad correspondeinte 
 
+# Variables
+distancia = as.double(readline(prompt = "Por favor, ingrese su distancia "))
+t = 60
+
+# Proceso
+vel = distancia/t
+
+# Fin proceso
+print(paste("Su velocidad dada la distancia y el tiempo ingresados es: ", vel, "m/s"))
 
 # Ejemplo de monto a pagar
 #Calcular el monto a pagar por art?culo si se tiene datos de entrada la cantidad de docenas de compra y el costo por unidad 
