@@ -1,16 +1,24 @@
 
 #### Librerías #### 
 
-# install.packages("tidyverse")
-# install.packages("tokenizers")
+install.packages("tidyverse")
+install.packages("tokenizers")
 library(tidyverse)
 library(tokenizers)
 
 #### Tipos de Datos ####
 
-# typeof(____) 
+nombre = "Juan"
+typeof(nombre)
 
-# class(_____) 
+logical = TRUE
+class(logical)
+
+numero = 12L
+class(numero)
+
+complejo = 2+5i
+class(complejo)
 
 #### Vectore ####
 
@@ -19,15 +27,17 @@ library(tokenizers)
 #las listas son delimitadas por medio de "()", se separan por medio de comas y la funci?n demarcada por "C"
 #para
 
-# lista <- c(__, __, __)
-# class(lista)
+lista <- c(2L,5,7)
+class(lista)
 
+lista <- c(TRUE,FALSE)
+class(lista)
 
 #Se puede realizar la transformación del tipo de dato que se encuentra en el vector 
 
-# lista <- as.______(lista)
-# lista
-# class(lista)
+lista <- as.character(lista)
+lista
+class(lista)
 
 ####Modificación de texto####
 
@@ -38,14 +48,17 @@ texto <- "También entiendo que como es temporada de elecciones, las expectativa
         en prioridades bipartidistas como la reforma de la justicia penal y ayudar a la gente que está luchando 
         contra la adicción a fármacos de prescripción. Tal vez podamos sorprender de nuevo a los cínicos."
 
-# palabras <- tokenize_words(_____) #Separa el texto por palabras
-# view(palabras)
+palabras <- tokenize_words(texto) #Separa el texto por palabras
+view(palabras)
 
-
+length(palabras[[1]])
 #Dado que se creo una lista con todas las palabras, ahora se puede realizar modicifaciones sobre ellas
 #Creacion de una tabla por ejemplo
 
+tabla = table(palabras[[1]]) 
+view(tabla)
 
 #Data frame: es una estructura de datos con dimesiones en la cual se pueden guardar tipos de datos
-# tabla <- data_frame(palabras = names(_____), recuento = as.numeric(_____))
-# tabla
+tabla <- data_frame(palabras = names(tabla), recuento = as.numeric(tabla))
+view(tabla)
+

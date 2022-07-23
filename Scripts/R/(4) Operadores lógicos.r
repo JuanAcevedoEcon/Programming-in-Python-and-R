@@ -17,6 +17,8 @@
 #### Operadores lógicos ####
 #==========================#
 
+T == 1
+F == 0
 
 #Operaodor AND (&)
 
@@ -26,6 +28,9 @@ T & F
 F & T  
 F & F
 
+x = 3;y = 3
+x == 3 & y == 4
+
 #Operador OR (alt 124, |)
 
 T | T
@@ -34,6 +39,8 @@ T | F
 F | T  
 F | F
 
+x = 3;y = 3
+x == 3 | y == 4
 
 #Operador NOT (!)
 
@@ -42,14 +49,18 @@ F | F
 !T
 !F
 
+! x = 3
+
+!!!!!T
+
 # Valores especiales
 
-# Valor nulo numérico
-# Valor nulo no numérico
-# Valor nulo booleano
-class(_)
-class(_)
-class(_)
+x = 0/0; x # Valor nulo numérico
+y = NULL # Valor nulo no numérico
+z = NA # Valor nulo booleano
+class(x)
+class(y)
+class(z)
 
 
 #==========================================#
@@ -59,35 +70,25 @@ class(_)
 
 #### Sintaxis con if y else ####
 
-edad = 10
+edad = 19
 
 
-# __ (_____ >= 18) {
-  
+if (edad >= 18) {
   print('Usted es mayor de edad')
-  
-# } ______ {
-  
+} else {
   print('Usted es menor de edad')
-  
-# }
-
-
-
-
-_______
-
-__ (_______ >= ____) {
-  
-  print('Felicitaciones, usted aprobó el curso')
-  
-} _____ {
-  
-  print('Usted reprobó el curso')
-  
 }
 
 
+
+
+nota = 3.6 
+
+if (nota >= 3.5) {
+  print('Felicitaciones, usted aprobó el curso')
+} else {
+  print('Usted reprobó el curso')
+}
 
 
 #### Sintaxis con if, else if y else ####
@@ -125,7 +126,7 @@ datos_inicial = data.frame(Mes = seq(from = as.Date('2020-03-1'), to = as.Date('
 )
 
 
-datos_inicial
+view(datos_inicial)
 
 # () Paréntesis
 # [] Corchetes
@@ -136,9 +137,9 @@ plot(x = datos_inicial[,1], y = datos_inicial[,2], type = 'l')
 nuevo_dato = 0.44
 datos_final = data.frame(Mes = seq(from = as.Date('2020-03-1'), to = as.Date('2022-03-1'), by = 'month')-1,
                          Inflación = c(0.33, 0.74, 1.18, 0.77, -0.68, -0.91, -0.26, -0.28, 0.51, -0.27, 0.07, 0.65, 0.86, 0.45, 1.12, 1.41, 2.85, -0.42, 0.44, 0.71, 0.8, 0.62, 1.03,
-                                       2, ______)
+                                       2, nuevo_dato)
 )
-datos_final
+view(datos_final)
 
 último = datos_final[nrow(datos_final),2]
 penúltimo = datos_final[nrow(datos_final)-1, 2]
