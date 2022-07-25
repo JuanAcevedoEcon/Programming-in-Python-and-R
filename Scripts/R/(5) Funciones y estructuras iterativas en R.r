@@ -1,7 +1,7 @@
 #=========================================================================================================#
-#                         Unidad de Inform?tica - Facultad de Ciencias Ec?micas
-#                                Curso Libre Programaci?n b?sica en Python y R 2022-1
-#                                   Sesi?n 4: Operadores l?gicos
+#                         Unidad de Inform?tica - Facultad de Ciencias Económicas
+#                                Curso Libre Programación básica en Python y R 2022-1
+#                                   Sesi?n 4: Operadores lógicos
 #                                   Monitor: Juan Felipe Acevedo Pérez                                
 #=========================================================================================================#
 
@@ -41,7 +41,7 @@ for (i in 1:20) {
 #### 1.2. Sintaxis for anidado. Ejemplo: Tabla de multiplicar ####
 
 for (i in 1:10) {
-  print('')
+  print('------------')
   print(paste('Tabla del', i))
   
   for (j in 1:10) {
@@ -61,7 +61,7 @@ datos_acciones = data.frame(Fecha = seq(from = as.Date('2021-1-1'), to = as.Date
                             CO = c(0.23, 0.36, NA, 0.41, 0.49, NA, NA, 0.7, 1.6, 1.62, 1.87, 1.93),
                             US = c(0.7, 0.4, 0.85, 0.99, 1.5, NA, NA, 2.22, 2.3, 2.31, 2.46, 3),
                             JP = c(0.51, 0.53, 0.69, NA, 0.86, 0.92, NA, NA, 1.65, 1.72, 1.96, 1.97))
-datos_acciones
+view(datos_acciones)
 
 # Visualizar los datos vacíos en las series
 plot(datos_acciones[,2], type = 'l', main = 'Colombia')
@@ -90,9 +90,9 @@ for (i in paises) {
 
 
 
-datos_inter # Ver el resultado
+view(datos_inter) # Ver el resultado
 colnames(datos_inter) = c('Fecha', paises) # Renombrar las variables
-datos_inter # Verificar el dataframe final
+view(datos_inter) # Verificar el dataframe final
 
 # Verificación visual
 plot(datos_acciones[,2], type = 'l', col = 'blue', main = 'Colombia')
@@ -192,10 +192,13 @@ while (i <= 10) {
 
 #Crear una función definiendo los argumentos y la expresión
 
+# def suma(x,y):
 suma <- function(x, y) {
   resultado <- x + y
   return(resultado)
 }
+
+suma(10,12)
 
 Mi.funcion <- function(x,y,z,j=3){
   w = x^2 + y^2 + z + j
@@ -205,7 +208,7 @@ Mi.funcion <- function(x,y,z,j=3){
 #Evaluar la función para ciertos valores de los argumentos
 suma(x=4, y=6)
 
-Mi.funcion(2,3,10)
+Mi.funcion(2,3,10,1)
 Mi.funcion(c(1:10),c(1:10),c(1:10))
 
 # función más elaborada: construya una funci?n que imprima si la suma de los elementos
